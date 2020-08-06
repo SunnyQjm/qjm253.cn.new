@@ -16,9 +16,22 @@
   height: 100vh;
   color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   //background: #61dafb;
+
+  &__title {
+    display: inline-block;
+    text-align: justify;
+    line-height: 1;
+    padding: 0;
+    vertical-align: top;
+  }
+
+  &__description {
+
+  }
 
   &__next-page {
     position: absolute;
@@ -30,5 +43,20 @@
     bottom: 20px;
     padding: 5px;
     animation: floating 1s infinite;
+  }
+
+  &__friend-links {
+    margin-top: 30px;
+
+    a {
+      margin: 10px;
+      height: min-content;
+      width: min-content;
+
+      *:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 .1em white, 0 0 .3em white;
+      }
+    }
   }
 }

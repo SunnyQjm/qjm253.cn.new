@@ -1,0 +1,14 @@
+.circle-image {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  &__img {
+    display: block;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+  }
+}

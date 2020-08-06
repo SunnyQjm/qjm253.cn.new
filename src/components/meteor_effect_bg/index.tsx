@@ -20,7 +20,7 @@ export default class MeteorEffectBgComponent extends BaseComponent<MeteorEffectB
 
     static maxRadiusXSize = 30;
     static minRadiusXSize = 20;
-    static maxRotation = 50;
+    static maxRotation = 40;
     static minRotation = 40;
     static maxY = 0.1;
     static minY = 0;
@@ -278,7 +278,7 @@ export default class MeteorEffectBgComponent extends BaseComponent<MeteorEffectB
                     x: (window.innerHeight - elipse.y()) / Math.tan(elipse.rotation() * Math.PI / 180) + elipse.x(),
                     y: window.innerHeight,
                     strokeWidth: 6,
-                    scaleX: 1.5,
+                    // scaleX: 1.5,
                     onFinish: () => {
                         elipse.remove();
                     }
