@@ -5,6 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  background: #272727;
+  //cursor: url("./imgs/custom_cursor.png"), auto;
+  cursor: url("./imgs/custom_cursor.png"), default;
+}
+
+
+// 隐藏滚动条
+body::-webkit-scrollbar {
+  display: none;
 }
 
 code {

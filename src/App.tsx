@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Suspense} from 'react';
+import './App.scss';
+import {
+    BackTopComponent
+} from './components';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const IndexPage1 = React.lazy(() => import('./pages/index/page1'));
+const IndexPage2 = React.lazy(() => import('./pages/index/page2'));
+
+export default class App extends React.Component<any, any> {
+    render() {
+        return (
+            <div className="App">
+                <Suspense fallback={<div>Loading...</div>}>
+                    <IndexPage1 onNextPageClick={() => {
+
+                        // 滚动到下一页
+                        window.scrollTo({
+                            top: window.innerHeight,
+                            behavior: 'smooth'
+                        })
+                    }}/>
+                    <IndexPage2/>
+
+                    <BackTopComponent/>
+                </Suspense>
+            </div>
+        );
+    }
 }
-
-export default App;
