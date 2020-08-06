@@ -39,7 +39,7 @@ export default class MeteorEffectBgComponent extends BaseComponent<MeteorEffectB
      * 在鼠标点击位置画一个魔法特效
      */
     drawMagicEffect = (e: Konva.KonvaEventObject<MouseEvent>) => {
-        console.log(`(${e.evt.x}, ${e.evt.y})`, e.evt)
+        // console.log(`(${e.evt.x}, ${e.evt.y})`, e.evt)
         const {x, y} = e.evt;
         const baseSize = 50;
         const strokeWidth = 0.5;
@@ -225,6 +225,8 @@ export default class MeteorEffectBgComponent extends BaseComponent<MeteorEffectB
         magicEffectGroup.add(edgeLittleMagicCircle7);
         magicEffectGroup.add(edgeLittleMagicCircle8);
 
+        this._layer?.add(magicEffectGroup);
+
         magicCircle.to({
             duration: duration,
             rotation: -360,
@@ -246,11 +248,12 @@ export default class MeteorEffectBgComponent extends BaseComponent<MeteorEffectB
             scaleY: 0.8,
             easing: Konva.Easings.EaseOut,
             onFinish: () => {
-                magicEffectGroup.remove();
+                setTimeout(() => {
+                    magicEffectGroup.remove();
+                }, 100);
             }
         });
 
-        this._layer?.add(magicEffectGroup);
         this._layer?.draw();
     }
 
