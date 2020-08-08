@@ -1,7 +1,7 @@
 import React from "react";
 import Konva from "konva";
 import {
-    Stage, Layer, Star, Text, Ellipse, Rect
+    Stage, Layer
 } from 'react-konva';
 import BaseComponent, {BaseComponentProps, BaseComponentState} from "../base/BaseComponent";
 
@@ -45,9 +45,9 @@ export default class MeteorEffectBgComponent extends BaseComponent<MeteorEffectB
         const strokeWidth = 0.5;
         const color = Konva.Util.getRandomColor();
         const shadowConfig = {
-            shadowColor: 'gray',
-            shadowBlur: 0,
-            shadowOffset: {x: 10, y: 10},
+            shadowColor: color,
+            shadowBlur: 3,
+            shadowOffset: {x: 0, y: 0},
             shadowOpacity: 0.5,
         };
         const duration = 1.2;

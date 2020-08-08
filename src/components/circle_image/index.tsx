@@ -32,7 +32,6 @@ export default class CircleImageComponent extends BaseComponent<CircleImageCompo
         const img = new Image();
         img.src = this.props.imgSrc;
         img.onload = () => {
-            console.log('onLoad', this.props.imgSrc, img.width);
             let width = img.width;
             let height = img.height;
             let abs = Math.abs(width - height);

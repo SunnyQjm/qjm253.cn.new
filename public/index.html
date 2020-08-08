@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="%PUBLIC_URL%/logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+            name="description"
+            content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png"/>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -25,19 +25,122 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>SunnyQjm | 建明</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+</head>
+<style>
+    body{
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: #272727;
+    }
+    #appLoading {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        z-index: 100;
+        background: gray;
+    }
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    #appLoading>div {
+        display: inline-block;
+        margin: .2em;
+        font-size: 1.2em;
+        position: relative;
+        animation: move 3s linear infinite;
+        opacity: 0;
+        transform: rotate(180deg);
+    }
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    #appLoading > div::before {
+        content: '';
+        position: absolute;
+        background: rgba(255, 255, 255, .5);
+        left: 0; right: 0;
+        bottom: -.5em;
+        width: 100%;
+        border-radius: 50%;
+        height: .15em;
+    }
+
+    #appLoading > div:nth-child(2) {
+        animation-delay: .3s;
+    }
+    #appLoading > div:nth-child(3) {
+        animation-delay: .6s;
+    }
+    #appLoading > div:nth-child(4) {
+        animation-delay: .9s;
+    }
+    #appLoading > div:nth-child(5) {
+        animation-delay: 1.2s;
+    }
+    #appLoading > div:nth-child(6) {
+        animation-delay: 1.5s;
+    }
+    #appLoading > div:nth-child(7) {
+        animation-delay: 1.8s;
+    }
+
+    @keyframes move {
+        0% {
+            left: 0;
+            opacity: 0;
+        }
+        35% {
+            left: 40%;
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+
+        65% {
+            left: 60%;
+            transform: rotate(0);
+        }
+
+        100% {
+            left: 100%;
+            transform: rotate(-180deg);
+            opacity: 0;
+        }
+    }
+</style>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id='appLoading'>
+    <div>G</div>
+    <div>N</div>
+    <div>I</div>
+    <div>D</div>
+    <div>A</div>
+    <div>O</div>
+    <div>L</div>
+</div>
+<div id="root"></div>
+<!--
+  This HTML file is a template.
+  If you open it directly in the browser, you will see an empty page.
+
+  You can add webfonts, meta tags, or analytics to this file.
+  The build step will place the bundled scripts into the <body> tag.
+
+  To begin the development, run `npm start` or `yarn start`.
+  To create a production bundle, use `npm run build` or `yarn build`.
+-->
+<script>
+    const start = Date.now();
+    document.onreadystatechange = () => {
+        if (document.readyState === 'complete') {
+            document.getElementById('appLoading').remove();
+        }
+    }
+</script>
+</body>
 </html>
