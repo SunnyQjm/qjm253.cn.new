@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'zglyingzt2278672555223c6';
+  src: url('//cdn.repository.webfont.com/webfonts/nomal/140230/46184/5f2fef11f629d80b904c0f58.gif?r=145370513905');
+  src: url('//cdn.repository.webfont.com/webfonts/nomal/140230/46184/5f2fef11f629d80b904c0f58.gif?r=145370513905?#iefix') format('embedded-opentype'), url('//cdn.repository.webfont.com/webfonts/nomal/140230/46184/5f2fef11f629d80b904c0f58.png?r=145370513905') format('woff2'), url('//cdn.repository.webfont.com/webfonts/nomal/140230/46184/5f2fef11f629d80b904c0f58.bmp?r=145370513905') format('woff'), url('//cdn.repository.webfont.com/webfonts/nomal/140230/46184/5f2fef11f629d80b904c0f58.jpg?r=145370513905') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @keyframes floating {
   0% {
@@ -27,10 +34,11 @@
     line-height: 1;
     padding: 0;
     vertical-align: top;
+    font-family: 'zglyingzt2278672555223c6', sans-serif;
   }
 
   &__description {
-
+    font-family: 'zglyingzt2278672555223c6', sans-serif;
   }
 
   &__next-page {

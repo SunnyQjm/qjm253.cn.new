@@ -18,9 +18,9 @@ export default class IndexPage2 extends React.PureComponent<IndexPage2Props, Ind
                 <div className='index-page-2__xueban-detail-container'>
                     <div className='index-page-2__xueban-detail-container_line1'>
                         <img src={xuebanLogo} className='index-page-2__xueban-detail-container_line1_logo'/>
-                        <span className='index-page-2__xueban-detail-container_line1_title'>学伴</span>
+                        <span className='index-page-2__xueban-detail-container_line1_title css22786b4732223c6'>学伴</span>
                     </div>
-                    <div className='index-page-2__xueban-detail-container_detail'>
+                    <div className='index-page-2__xueban-detail-container_detail css22786b4732223c6'>
                         一款用于大连理工大学校内，集查询成绩、课表、考场、借阅信息及图书检索等多功能于一身的学生助手型App
                     </div>
                     <div className='index-page-2__xueban-detail-container_links'>

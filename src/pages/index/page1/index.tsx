@@ -57,7 +57,7 @@ export default class IndexPage1 extends React.PureComponent<IndexPage1Props, Ind
                 }} style={{
                     zIndex: 1
                 }}>SunnyQjm | 建明</h1>
-                <span>每一个不曾起舞的日子，都是对生命的辜负</span>
+                <span className='index-page-1__description'>每一个不曾起舞的日子，都是对生命的辜负</span>
                 <RcQueueAnim className='index-page-1__friend-links' key='page' type={'scaleX'} delay={300} duration={5000}>
                     <a href="https://github.com/SunnyQjm" key={'github'}>
                         <CircleImageComponent imgSrc={github} size={30} padding={10} backgroundColor={'white'}/>
