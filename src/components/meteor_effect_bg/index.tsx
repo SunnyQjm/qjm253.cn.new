@@ -293,7 +293,7 @@ export default class MeteorEffectBgComponent extends BaseComponent<MeteorEffectB
     render() {
         return (
             <Stage width={window.innerWidth} height={window.innerHeight} style={{
-                position: 'fixed',
+                position: 'absolute',
                 left: 0,
                 top: 0,
                 zIndex: 0

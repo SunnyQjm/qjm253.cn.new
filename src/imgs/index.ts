@@ -8,6 +8,9 @@ import github from './github.png';
 import hexo from './hexo.png';
 import jianShu from './jian_shu.png';
 import wordpress from './wordpress.png';
+import xuebanLogo from './xueban_logo.png';
+import xuebanMiniProgramCode from './xueban_miniprogram_code.jpg';
+import xuebanH5Code from './xueban_h5_code.png';
 
 export {
     down,
@@ -19,5 +22,8 @@ export {
     github,
     hexo,
     jianShu,
-    wordpress
+    wordpress,
+    xuebanLogo,
+    xuebanH5Code,
+    xuebanMiniProgramCode
 }
