@@ -13,7 +13,6 @@ export default class App extends React.Component<any, any> {
             <div className="App">
                 <Suspense fallback={<div>Loading...</div>}>
                     <IndexPage1 onNextPageClick={() => {
-
                         // 滚动到下一页
                         window.scrollTo({
                             top: window.innerHeight,

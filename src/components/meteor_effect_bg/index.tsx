@@ -254,7 +254,7 @@ export default class MeteorEffectBgComponent extends BaseComponent<MeteorEffectB
             }
         });
 
-        this._layer?.draw();
+        this._layer?.batchDraw();
     }
 
     componentDidMount() {
@@ -272,7 +272,7 @@ export default class MeteorEffectBgComponent extends BaseComponent<MeteorEffectB
                     rotation: MeteorEffectBgComponent.getRandomValue(MeteorEffectBgComponent.minRotation, MeteorEffectBgComponent.maxRotation),
                 });
                 this._layer.add(elipse)
-                this._layer.draw();
+                this._layer.batchDraw();
                 elipse.to({
                     duration: MeteorEffectBgComponent.getRandomValue(MeteorEffectBgComponent.minDuration, MeteorEffectBgComponent.maxDuration),
                     x: (window.innerHeight - elipse.y()) / Math.tan(elipse.rotation() * Math.PI / 180) + elipse.x(),
